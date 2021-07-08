@@ -1,0 +1,16 @@
+{
+  "name": "apollo-mocking-moomark",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/pjainxido/apollo-mocking-moomark.git",
+  "scripts": {
+    "start": "node ."
+
+  },
+  "author": "Park <pjane123@naver.com>",
+  "license": "MIT",
+  "dependencies": {
+    "apollo-server": "^2.25.2",
+    "graphql": "^15.5.1"
+  }
+}
