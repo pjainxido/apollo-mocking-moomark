@@ -17,6 +17,6 @@ const server = new ApolloServer({
   resolvers,
 });
 
-server.listen().then(({ url }) => {
+server.listen(4004).then(({ url }) => {
   console.log(`Listening at ${url}`);
 });

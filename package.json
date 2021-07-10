@@ -4,13 +4,13 @@
   "main": "index.js",
   "repository": "https://github.com/pjainxido/apollo-mocking-moomark.git",
   "scripts": {
-    "start": "node ."
-
+    "start": "nodemon index.js "
   },
   "author": "Park <pjane123@naver.com>",
   "license": "MIT",
   "dependencies": {
     "apollo-server": "^2.25.2",
-    "graphql": "^15.5.1"
+    "graphql": "^15.5.1",
+    "nodemon": "^2.0.11"
   }
 }
