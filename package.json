@@ -6,11 +6,13 @@
   "scripts": {
     "start": "nodemon index.js "
   },
-  "author": "Park <pjane123@naver.com>",
+  "author": "Park <pjainxido@gmail.com>",
   "license": "MIT",
   "dependencies": {
     "apollo-server": "^2.25.2",
+    "faker": "^5.5.3",
     "graphql": "^15.5.1",
     "nodemon": "^2.0.11"
-  }
+  },
+  "type": "module"
 }
