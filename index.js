@@ -6,16 +6,6 @@ import faker from 'faker';
 const title = ['test', '마크타운데 관하여', 'about react', 'apollo'];
 const author = []
 
-// const dateScalar = new GraphQLScalarType({
-//   name: 'Date',
-//   parseValue(value) {
-//     return new Date(value);
-//   },
-//   serialize(value) {
-//     return value.toISOString();
-//   },
-// });
-
 const mocks = {
   Id: () => faker.datatype.uuid(),
   Int: () => faker.datatype.number(100),
@@ -61,15 +51,8 @@ const typeDefs = gql`
   }
 `;
 
-// const resolvers = {
-//   Query: () => ({
-//     ping: () => 'pong',
-//     postlist: () => new MockList(10),
-//   }),
-// };
 
 const server = new ApolloServer({
-  // resolvers,
   typeDefs,
   mocks,
   mockEntireSchema: false,
