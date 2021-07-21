@@ -1,6 +1,4 @@
-import { PostData } from './data.js';
-import { ApolloServer, gql, makeExecutableSchema, MockList } from 'apollo-server';
-import { GraphQLScalarType } from 'graphql';
+import { ApolloServer, gql,  MockList } from 'apollo-server';
 import faker from 'faker';
 
 const title = ['test', '마크타운데 관하여', 'about react', 'apollo'];
