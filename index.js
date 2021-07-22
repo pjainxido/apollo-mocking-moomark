@@ -1,8 +1,8 @@
 import { ApolloServer, gql,  MockList } from 'apollo-server';
 import faker from 'faker';
 
-const title = ['test', '마크타운데 관하여', 'about react', 'apollo'];
-const author = []
+const title = ['test', 'markdown에 관하여', 'about react', 'apollo'];
+
 
 const mocks = {
   Id: () => faker.datatype.uuid(),
@@ -15,6 +15,7 @@ const mocks = {
   }),
   Query: () => ({
     ping: () => 'pong',
+    post: () => new MockList(1),
     postlist: () => new MockList(100),
   }),
 };
@@ -23,7 +24,7 @@ const typeDefs = gql`
   scalar Date
   type Query {
     ping: String
-    postData: PostData!
+    post: [PostData]!
     postlist: [PostListData]!
   }
   type PostData {
@@ -49,13 +50,12 @@ const typeDefs = gql`
   }
 `;
 
-
 const server = new ApolloServer({
   typeDefs,
   mocks,
   mockEntireSchema: false,
 });
 
-server.listen(4004).then(({ url }) => {
+server.listen(4000).then(({ url }) => {
   console.log(`Listening at ${url}`);
 });
